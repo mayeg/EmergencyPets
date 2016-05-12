@@ -1,0 +1,34 @@
+{% extends "plantillas/perfil.html" %}
+{% block header%}
+{% block name %}{{usuario.getNombre()}}{% endblock %}
+{% endblock %}
+{% block menu %}
+
+{% endblock %}
+{% block contenido %}
+<body class="orange accent-1 container">
+    <div id="profile-page" class="section">
+            <div id="profile-page-sidebar" class="center col s6">
+                <!-- Profile About  -->
+                <div class="col s6">
+
+
+                </div>
+                <div class="card white center col s6">
+                    <div class="card-content orange-text">
+                        <span class="card-title">INFORMACION!</span>
+                        <p>{{usuario.getNombre()}}</p>
+                        <p>{{usuario.getApellido()}}</p>
+                        <p>{{usuario.getCedula()}}</p>
+                        <p>{{usuario.getGenero()}}</p>
+                        <p>{{usuario.getEmail()}}</p>
+                        <p>{{usuario.getDireccion()}}</p>
+                        <p>{{usuario.getBarrio()}}</p>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+
+{% endblock %}

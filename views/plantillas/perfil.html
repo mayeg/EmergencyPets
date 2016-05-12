@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>PERFIL</title>
+
+    <!-- CORE CSS-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/materialize.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/app.css') }}">
+    <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/prism.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='js/plugins/perfect-scrollbar/perfect-scrollbar.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='js/plugins/chartist-js/chartist.min.css') }}">
+</head>
+
+<body class="orange accent-1">
+<!-- End Page Loading -->
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!-- START HEADER -->
+<section class="content-header">
+            {% block header %} {% endblock %}
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            {% block contenido %} {% endblock %}
+
+        </section><!-- /.content -->
+<!-- END HEADER -->
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!-- START MAIN -->
+<div id="main">
+    <!-- START WRAPPER -->
+    <div class="wrapper">
+        <!-- START LEFT SIDEBAR NAV-->
+        <aside id="left-sidebar-nav" class="orange lighten-1">
+            <ul id="slide-out" class="side-nav fixed leftside-navigation">
+                <li class="user-details orange lighten-1">
+                    <div class="row">
+                        <div class="col col s8 m8 l8">
+                            <img src="/static/imagenes/user.png" alt=""
+                                 class="responsive-img circle">
+                        </div>
+                        <div class="col  s8 m8 l8">
+                            <ul id="profile-dropdown" class="dropdown-content">
+                                <li><a href="/logout"><i
+                                        class="mdi-hardware-keyboard-tab"></i>
+                                    Logout</a>
+                                </li>
+                            </ul>
+                            <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn"
+                               href="#" data-activates="profile-dropdown">{% block name %}{% endblock %}
+                                <i class="mdi-navigation-arrow-drop-down right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="bold"><a href="usuarios/perfil"
+                                    class="waves-effect waves-cyan"><i
+                        class="mdi-action-dashboard"></i>Mi perfil</a>
+                </li>
+                <li class="bold"><a href="/mascotas/registro"
+                                    class="waves-effect waves-cyan"><i
+                        class="mdi-action-dashboard"></i>Agregar Mascota</a>
+                </li>
+                <li class="bold"><a href="/emergencia"
+                                    class="waves-effect waves-cyan"><i
+                        class="mdi-action-dashboard"></i>Emergencia</a>
+                </li>
+                <li class="bold"><a href="/"
+                                    class="waves-effect waves-cyan"><i
+                        class="mdi-action-dashboard"></i>Adoptame</a>
+                </li>
+                <li class="bold"><a href="/perfilMascota"
+                                    class="waves-effect waves-cyan"><i
+                        class="mdi-action-dashboard"></i> Mi mascota</a>
+                </li>
+            </ul>
+        </aside>
+        <!-- LEFT RIGHT SIDEBAR NAV-->
+    </div>
+    <!-- END WRAPPER -->
+</div>
+<!-- END MAIN -->
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!-- START FOOTER -->
+<
+<!-- END FOOTER -->
+<!-- ================================================
+Scripts
+================================================ -->
+
+<!-- jQuery Library -->
+<script src="{{ url_for('static', filename='js/jquery-1.11.2.min.js') }}"></script>
+<!--materialize js-->
+<script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+<!--prism-->
+<script src="{{ url_for('static', filename='js/prism.js') }}"></script>
+<!--scrollbar-->
+<script src="{{ url_for('static', filename='js/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+<!-- chartist -->
+<script src="{{ url_for('static', filename='js/plugins/chartist-js/chartist.min.js') }}"></script>
+<!--plugins.js - Some Specific JS codes for Plugin Settings-->
+<script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+{% block scripts %} {% endblock %}
+</body>
+
+</html>

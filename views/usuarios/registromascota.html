@@ -1,0 +1,128 @@
+{% extends "plantillas/perfil.html" %}
+{% block header%}
+{% block name %}{{user.getNombre()}}{% endblock %}
+{% endblock %}
+{% block menu %}
+{% endblock %}
+{% block contenido %}
+
+<body class="orange accent-1 container">
+
+<!-- End Page Loading -->
+<div class="row">
+    <div class="row col s3">
+
+    </div>
+    <div class="col s8 m8 l8 card-panel">
+        <form class="form-horizontal " action="/mascotas/registro" method="POST">
+            <div class="row ">
+                <div class="input-field col s10 m10 l10">
+                    <h4>Registro</h4>
+                    <p class="center">Aqui podras registrar la mascota.</p>
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s6">
+                    <i class="mdi-social-person-outline prefix"></i>
+                    <input id="nombre" type="text" name="nombre">
+                    <label for="nombre" class="center-align">Nombre</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="mdi-action-lock-outline prefix"></i><div class="file-field input-field">
+                    <div class="btn grey-tex tex-lighten-5 orange lighten-1">
+                        <span>Foto</span>
+                        <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" name="foto">
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s6 l6 m6">
+                    <i class="mdi-social-person-outline prefix"></i>
+                    <input class="datepicker" id="fecha_nacimiento"
+                           type="date"
+                           name="fecha_nacimiento">
+                    <label for="fecha_nacimiento" class="center-align">Fecha
+                        de
+                        nacimiento</label>
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s6">
+                    <i class="mdi-social-person-outline prefix"></i>
+                    <input id="raza" type="text" name="raza">
+                    <label for="raza" class="center-align">Raza</label>
+                </div>
+                <div class="input-field col s6 ">
+                    <i class="mdi-social-person-outline prefix"></i>
+                    <select name="genero" id="genero" class="col s6 l6 m6">
+                        <option value="" disabled selected>Genero</option>
+                        <option value="M">M</option>
+                        <option value="H">H</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="mdi-social-person-outline prefix"></i>
+                    <textarea id="textarea" class="materialize-textarea"
+                              name="vacunas">
+                        </textarea>
+                    <label for="textarea" class="center-align">Vacunas</label>
+                </div>
+            </div>
+            <div class="row margin">
+
+            </div>
+            <div class="row margin col s12">
+                <div class="input-field col s6">
+                    <i class="mdi-action-lock-outline prefix"></i><select
+                        name="especie" id="especie" class="col s6 l6 m6">
+                    <option value="" disabled selected>Especie</option>
+                    <option value="gato">Gato</option>
+                    <option value="perro">Perro</option>
+                </select>
+                </div>
+                <div class="input-field col s6">
+                    <i class="mdi-action-lock-outline prefix"></i>
+                    <input id="peso_aprox" type="text" name="peso_aprox">
+                    <label for="peso_aprox">Peso aproximado(Kg)</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="submit"
+                           class="btn waves-effect waves-light col s12 grey-tex tex-lighten-5 orange lighten-1"
+                           value="Registrar Mascota">
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+<!-- ================================================
+  Scripts
+  ================================================ -->
+{% block scripts %}
+<script>
+      $('.datepicker').pickadate({
+      selectMonths: true,
+      selectYears: 15
+      });
+
+       $(document).ready(function() {
+    $('select').material_select();
+  });
+
+  $('#textarea1').val('New Text');
+  $('#textarea1').trigger('autoresize');
+
+
+</script>
+
+{% endblock %}

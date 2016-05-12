@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>Registro</title>
+
+    <!-- CORE CSS-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/materialize.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/page-center.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/app.css') }}">
+    <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/prism.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='js/plugins/perfect-scrollbar/perfect-scrollbar.css') }}">
+
+</head>
+
+<body class="orange accent-1">
+<!-- Start Page Loading -->
+<div class="row">
+    <div class="col s6 l6 m0 card-panel orange accent-1">
+        <img src="/static/imagenes/perro.jpeg" class="img responsive-img">
+    </div>
+
+    <!-- End Page Loading -->
+    <div class="row col s6 l6 m12">
+        <div class="row card-panel z-depth-3">
+            <form class="form-horizontal " action="/usuarios/registro"
+                  method="POST">
+                <div class="row">
+                    <div class="input-field">
+                        <h4 class="center">Registro</h4>
+                        <p class="center">Aqui podras registrate al sistema.</p>
+                    </div>
+                </div>
+                <div class="row margin">
+                    <div class="input-field col s6 l6 m6">
+                        <i class="mdi-social-person-outline prefix"></i>
+                        <input id="nombre" type="text" name="nombre">
+                        <label for="nombre" class="center-align">Nombre</label>
+                    </div>
+                    <div class="input-field col s6 l6 m6">
+                        <i class="mdi-social-person-outline prefix"></i>
+                        <input id="apellido" type="text" name="apellido">
+                        <label for="apellido"
+                               class="center-align">Apellido</label>
+                    </div>
+                </div>
+                <div class="row margin">
+                    <div class="input-field col s6 l6 m6">
+                        <i class="mdi-social-person-outline prefix"></i>
+                        <input id="cedula" type="text" name="cedula">
+                        <label for="cedula" class="center-align">Cedula</label>
+                    </div>
+                    <select name="genero" id="genero" class="col s6 l6 m6">
+                        <option value="" disabled selected>Genero</option>
+                        <option value="M">M</option>
+                        <option value="F">F</option>
+                    </select>
+                </div>
+                <div class="row margin">
+                    <div class="input-field col s12">
+                        <i class="mdi-social-person-outline prefix"></i>
+                        <input id="email" type="text" name="email">
+                        <label for="email" class="center-align">Email</label>
+                    </div>
+                </div>
+                <div class="row margin">
+                    <div class="input-field col s6 l6 m6">
+                        <i class="mdi-action-lock-outline prefix"></i>
+                        <input id="direccion" type="text" name="direccion">
+                        <label for="direccion">Direccion</label>
+                    </div>
+                    <div class="input-field col s6 l6 m6">
+                        <i class="mdi-social-person-outline prefix"></i>
+                        <input id="barrio" type="text" name="barrio">
+                        <label for="barrio" class="center-align">Barrio</label>
+                    </div>
+                </div>
+
+                <div class="row margin">
+                    <div class="input-field col s6 l6 m6">
+                        <i class="mdi-social-person-outline prefix"></i>
+                        <input class="datepicker" id="fecha_nacimiento"
+                               type="date"
+                               name="fecha_nacimiento">
+                        <label for="fecha_nacimiento" class="center-align">Fecha
+                            de
+                            nacimiento</label>
+                    </div>
+                    <div class="input-field col s6 l6 m6">
+                        <i class="mdi-social-person-outline prefix"></i>
+                        <input id="telefono" type="text" name="telefono">
+                        <label for="telefono"
+                               class="center-align">Telefono</label>
+                    </div>
+                </div>
+
+                <div class="row margin">
+                    <div class="input-field col s12">
+                        <i class="mdi-action-lock-outline prefix"></i>
+                        <input id="contrasena" type="password"
+                               name="contrasena">
+                        <label for="contrasena">Contraseña</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="submit"
+                               class="btn waves-effect waves-light col s12 grey-tex tex-lighten-5 orange lighten-1"
+                               value="Registrame">
+                    </div>
+                    <div class="input-field col s12">
+                        <p class="margin center medium-small sign-up">Ya tienes
+                            cuenta? <a href="/login">Inicia sesion</a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- ================================================
+  Scripts
+  ================================================ -->
+<script src="{{ url_for('static', filename='js/jquery-1.11.2.min.js') }}"></script>
+<!--materialize js-->
+<script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+<!--prism-->
+<script src="{{ url_for('static', filename='js/prism.js') }}"></script>
+<!--scrollbar-->
+<script src="{{ url_for('static', filename='js/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+<!--plugins.js - Some Specific JS codes for Plugin Settings-->
+<!--materialize js-->
+<script>
+      $('.datepicker').pickadate({
+      selectMonths: true,
+      selectYears: 15
+      });
+
+
+
+
+</script>
+<script>
+
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+
+
+
+
+</script>
+</body>
+
+</html>

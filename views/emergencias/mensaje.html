@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>PERFIL</title>
+
+    <!-- CORE CSS-->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/materialize.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/app.css') }}">
+    <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/prism.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='js/plugins/perfect-scrollbar/perfect-scrollbar.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='js/plugins/chartist-js/chartist.min.css') }}">
+
+</head>
+<body>
+<div class="row">
+    <nav class="orange lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+            <ul class="brand-logo"><a class="brand-logo"> </a>
+                <a id="logo-container" href="/" class="brand-logo">EMERGENCY
+                    PETS</a>
+            </ul>
+        </div>
+    </nav>
+        <div class="section">
+            <div class="container">
+                <h3 class="header center orange-text">PIDE AYUDA A UN
+                    PROFESIONAL</h3>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section">
+                <div class="row">
+                    <div class=" card-panel col s4 l4 m4 orange accent-1">
+                        <img src="/static/imagenes/gatoyperro.jpg"
+                             class="img responsive-img">
+                    </div>
+                    <div class="cad-panel col s8 ">
+                        <form class="form-horizontal "
+                              action="emergencia/mensaje" method="POST">
+                            <div class="row margin">
+                                <div class="input-field col s12">
+                                    <i class="mdi-social-person-outline prefix"></i>
+                    <textarea id="textarea" class="materialize-textarea"
+                              name="mensaje">
+                        </textarea>
+                                    <label for="textarea" class="center-align">Mensaje</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="submit"
+                                           class="btn waves-effect waves-light col s12 grey-tex tex-lighten-5 orange lighten-1"
+                                           value="Enviar Mensaje">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- START FOOTER -->
+
+        <footer class="page-footer orange">
+
+            <div class="footer-copyright">
+                <div class="container">
+                    Hecho por <a class="orange-text text-lighten-3"
+                                 href="http://ingsistemas.ufps.edu.co/">Universidad
+                    Francisco de Paula Santander</a>
+                </div>
+            </div>
+        </footer>
+</div>
+
+<script src="{{ url_for('static', filename='js/jquery-1.11.2.min.js') }}"></script>
+<!--materialize js-->
+<script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+<!--prism-->
+<script src="{{ url_for('static', filename='js/prism.js') }}"></script>
+<!--scrollbar-->
+<script src="{{ url_for('static', filename='js/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+<!-- chartist -->
+<script src="{{ url_for('static', filename='js/plugins/chartist-js/chartist.min.js') }}"></script>
+<!--plugins.js - Some Specific JS codes for Plugin Settings-->
+<script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+
+<script>
+  $('#textarea1').val('New Text');
+  $('#textarea1').trigger('autoresize');
+
+
+</script>
+</body>
+</html>

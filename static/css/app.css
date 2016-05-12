@@ -1,0 +1,13 @@
+.error {
+    color: red;
+}
+
+#notificacion {
+position: absolute;
+z-index: 99999;
+top:30px;
+float: right;
+right: 10px;
+width:300px;
+height:100px;
+}
