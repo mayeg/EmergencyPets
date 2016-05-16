@@ -1,83 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="msapplication-tap-highlight" content="no">
-  <title>INICIO DE SESION</title>
-  <!-- CORE CSS-->
-  <link rel="stylesheet"
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>INICIO DE SESION</title>
+    <!-- CORE CSS-->
+    <link rel="stylesheet"
           href="{{ url_for('static', filename='css/materialize.css') }}">
-  <link rel="stylesheet"
+    <link rel="stylesheet"
           href="{{ url_for('static', filename='css/style.css') }}">
-  <link rel="stylesheet"
+    <link rel="stylesheet"
           href="{{ url_for('static', filename='css/page-center.css') }}">
-  <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
-  <link rel="stylesheet"
+    <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+    <link rel="stylesheet"
           href="{{ url_for('static', filename='css/prism.css') }}">
-  <link rel="stylesheet"
+    <link rel="stylesheet"
           href="{{ url_for('static', filename='js/plugins/perfect-scrollbar/perfect-scrollbar.css') }}">
-  </head>
-<body class="orange accent-1">
-  <!-- Start Page Loading -->
-  <div id="loader-wrapper">
-      <div id="loader"></div>        
-      <div class="loader-section section-left"></div>
-      <div class="loader-section section-right"></div>
-  </div>
-  <!-- End Page Loading -->
-  <div id="login-page" class="row">
+</head>
+<body class=" grey lighten-1">
+<!-- Start Page Loading -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!-- End Page Loading -->
+<div id="login-page" class="row">
     <div class="col s12 z-depth-4 card-panel">
-      <form class="login-form" action="/login" method="POST">
-        <div class="row">
-          <div class="input-field col s12 center">
-            <img src="/static/imagenes/logo.png" alt="" class="img responsive-img valign profile-image-login">
-            <p class="center login-form-text orange-tex tex-lighten-1">INICIA SESION</p>
-          </div>
-        </div>
-        <div class="row margin">
-          <div class="input-field col s12">
-            <i class="mdi-social-person-outline prefix"></i>
-            <input id="email" type="text" name="email">
-            <label for="email" class="center-align">Email</label>
-          </div>
-        </div>
-        <div class="row margin">
-          <div class="input-field col s12">
-            <i class="mdi-action-lock-outline prefix"></i>
-            <input id="contrasena" type="password" name="contrasena">
-            <label for="contrasena">Contraseña</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input type="submit" class="btn waves-effect waves-light col s12 grey-tex tex-lighten-5 orange lighten-1" value="Iniciar sesión"/>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s6 m6 l6">
-            <p class="margin medium-small"><a  class="orange-tex tex-lighten-1" href="usuarios/registro"> Registrate!</a></p>
-          </div>
-          <div class="input-field col s6 m6 l6">
-              <p class="margin right-align medium-small "><a href="/" class="orange-tex tex-lighten-1"> Olvidaste tu contraseña?</a></p>
-          </div>          
-        </div>
-      </form>
+        <form class="login-form" action="/login" method="POST">
+            <div class="row">
+                <div class="input-field col s12 center">
+                    <img src="/static/imagenes/logo.png" alt=""
+                         class="img responsive-img valign profile-image-login">
+                    <p class="center login-form-text orange-tex tex-lighten-1">
+                        INICIA SESION</p>
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="mdi-social-person-outline prefix"></i>
+                    <input id="email" type="text" name="email">
+                    <label for="email" class="center-align">Email</label>
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="mdi-action-lock-outline prefix"></i>
+                    <input id="contrasena" type="password" name="contrasena">
+                    <label for="contrasena">Contraseña</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 center">
+                    <button class="btn waves-effect waves-light deep-orange lighten-2 " type="submit">
+                        Iniciar sesion
+                        <i class="mdi-content-send right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6 m6 l6">
+                    <p class="margin medium-small"><a
+                            class="orange-tex tex-lighten-1"
+                            href="usuarios/registro"> Registrate!</a></p>
+                </div>
+                <div class="input-field col s6 m6 l6">
+                    <p class="margin right-align medium-small "><a href="/"
+                                                                   class="orange-tex tex-lighten-1">
+                        Olvidaste tu contraseña?</a></p>
+                </div>
+            </div>
+        </form>
     </div>
-  </div>
-  <!-- ================================================
-    Scripts
-    ================================================ -->
-  <!-- jQuery Library -->
-  <script src="{{ url_for('static', filename='js/jquery-1.11.2.min.js') }}"></script>
-  <!--materialize js-->
-  <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
-  <!--prism-->
-  <script src="{{ url_for('static', filename='js/prism.js') }}"></script>
-  <!--scrollbar-->
-  <script src="{{ url_for('static', filename='js/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
-  <!--plugins.js - Some Specific JS codes for Plugin Settings-->
-  <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+</div>
+<!-- ================================================
+  Scripts
+  ================================================ -->
+<!-- jQuery Library -->
+<script src="{{ url_for('static', filename='js/jquery-1.11.2.min.js') }}"></script>
+<!--materialize js-->
+<script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+<!--prism-->
+<script src="{{ url_for('static', filename='js/prism.js') }}"></script>
+<!--scrollbar-->
+<script src="{{ url_for('static', filename='js/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+<!--plugins.js - Some Specific JS codes for Plugin Settings-->
+<script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
 </body>
 </html>

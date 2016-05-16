@@ -4,50 +4,53 @@
 {% endblock %}
 {% block menu %}
 {% endblock %}
+
 {% block contenido %}
 
-<body class="orange accent-1 container">
-
-<!-- End Page Loading -->
-<div class="row">
-    <div class="row col s3">
-
-    </div>
-    <div class="col s8 m8 l8 card-panel">
-        <form class="form-horizontal " action="/mascotas/registro" method="POST">
-            <div class="row ">
-                <div class="input-field col s10 m10 l10">
-                    <h4>Registro</h4>
-                    <p class="center">Aqui podras registrar la mascota.</p>
-                </div>
+<div id="breadcrumbs-wrapper" class=" grey lighten-3">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <br/>
+                <h5 class="breadcrumbs-title">Registrar Mascota</h5>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Mis Mascotas</a></li>
+                    <li><a href="#">Registrar Mascota</a></li>
+                </ol>
             </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <form class="form-horizontal " action="/mascotas/registro"
+              method="POST">
             <div class="row margin">
                 <div class="input-field col s6">
-                    <i class="mdi-social-person-outline prefix"></i>
+                    <i class="mdi-social-mood prefix"></i>
                     <input id="nombre" type="text" name="nombre">
-                    <label for="nombre" class="center-align">Nombre</label>
+                    <label for="nombre" >Nombre</label>
                 </div>
                 <div class="input-field col s6">
-                    <i class="mdi-action-lock-outline prefix"></i><div class="file-field input-field">
-                    <div class="btn grey-tex tex-lighten-5 orange lighten-1">
-                        <span>Foto</span>
-                        <input type="file">
+                    <div class="file-field input-field">
+                        <div class="btn grey-tex deep-orange lighten-2">
+                            <span>Foto</span>
+                            <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate"
+                                   type="text" name="foto">
+                        </div>
                     </div>
-                    <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" name="foto">
-                    </div>
-                </div>
                 </div>
             </div>
             <div class="row margin">
                 <div class="input-field col s6 l6 m6">
-                    <i class="mdi-social-person-outline prefix"></i>
+                    <i class="mdi-editor-insert-invitation prefix"></i>
                     <input class="datepicker" id="fecha_nacimiento"
                            type="date"
                            name="fecha_nacimiento">
-                    <label for="fecha_nacimiento" class="center-align">Fecha
-                        de
-                        nacimiento</label>
+                    <label for="fecha_nacimiento">Fecha de nacimiento</label>
                 </div>
             </div>
             <div class="row margin">
@@ -57,9 +60,10 @@
                     <label for="raza" class="center-align">Raza</label>
                 </div>
                 <div class="input-field col s6 ">
-                    <i class="mdi-social-person-outline prefix"></i>
-                    <select name="genero" id="genero" class="col s6 l6 m6">
-                        <option value="" disabled selected>Genero</option>
+                    <select name="genero" id="genero"
+                            class="col s6 l6 m6">
+                        <option value="" disabled selected>Genero
+                        </option>
                         <option value="M">M</option>
                         <option value="H">H</option>
                     </select>
@@ -71,7 +75,8 @@
                     <textarea id="textarea" class="materialize-textarea"
                               name="vacunas">
                         </textarea>
-                    <label for="textarea" class="center-align">Vacunas</label>
+                    <label for="textarea"
+                           class="center-align">Vacunas</label>
                 </div>
             </div>
             <div class="row margin">
@@ -79,31 +84,32 @@
             </div>
             <div class="row margin col s12">
                 <div class="input-field col s6">
-                    <i class="mdi-action-lock-outline prefix"></i><select
-                        name="especie" id="especie" class="col s6 l6 m6">
+                    <select
+                        name="especie" id="especie"
+                        class="col s6 l6 m6">
                     <option value="" disabled selected>Especie</option>
                     <option value="gato">Gato</option>
                     <option value="perro">Perro</option>
                 </select>
                 </div>
                 <div class="input-field col s6">
-                    <i class="mdi-action-lock-outline prefix"></i>
-                    <input id="peso_aprox" type="text" name="peso_aprox">
+                    <i class="mdi-social-person-outline prefix"></i>
+                    <input id="peso_aprox" type="text"
+                           name="peso_aprox">
                     <label for="peso_aprox">Peso aproximado(Kg)</label>
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s12">
-                    <input type="submit"
-                           class="btn waves-effect waves-light col s12 grey-tex tex-lighten-5 orange lighten-1"
-                           value="Registrar Mascota">
+                <div class="input-field col s12 center">
+                    <button class="btn waves-effect waves-light deep-orange lighten-2 " type="submit" >Registrar mascota
+                        <i class="mdi-content-send right"></i>
+                    </button>
                 </div>
 
             </div>
         </form>
     </div>
 </div>
-
 {% endblock %}
 <!-- ================================================
   Scripts
@@ -112,7 +118,7 @@
 <script>
       $('.datepicker').pickadate({
       selectMonths: true,
-      selectYears: 15
+      selectYears: 40
       });
 
        $(document).ready(function() {
@@ -121,7 +127,6 @@
 
   $('#textarea1').val('New Text');
   $('#textarea1').trigger('autoresize');
-
 
 </script>
 

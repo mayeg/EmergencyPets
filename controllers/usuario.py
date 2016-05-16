@@ -20,20 +20,13 @@ class UsuarioController:
         return render_template("usuarios/registro.html", usuario=usuario)
 
     def get_registro1(self):
-        usuario = {
-            'nombre': "", 'apellido': "", 'cedula': "", 'genero': "",
-            'email': "", 'barrio': "", 'direccion': "", 'fecha_nacimiento': "",
-            'telefono': ""}
 
-        return render_template("usuarios/registro1.html", usuario=usuario)
+        return render_template("usuarios/registro1.html")
 
     def get_registro2(self):
-        usuario = {
-            'nombre': "", 'apellido': "", 'cedula': "", 'genero': "",
-            'email': "", 'barrio': "", 'direccion': "", 'fecha_nacimiento': "",
-            'telefono': ""}
 
-        return render_template("usuarios/registro2.html", usuario=usuario)
+        return render_template("usuarios/registro2.html")
+
 
     def crear_usuario(self, cedula, nombre, apellido, genero, email, barrio,
                       direccion, fecha_nacimiento, telefono, contrasena):

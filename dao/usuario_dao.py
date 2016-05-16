@@ -63,7 +63,7 @@ class UsuarioDao:
             param = (usuario.getCedula(), usuario.getNombre(),
                      usuario.getApellido(), usuario.getGenero(),
                      usuario.getEmail(), usuario.getBarrio(),
-                     usuario.getDireccion(), str(usuario.getFecha_nacimiento()),
+                     usuario.getDireccion(), usuario.getFecha_nacimiento(),
                      usuario.getTelefono(), usuario.getContrasena())
             self.__cur.execute(query, param)
             self.__conn.commit()

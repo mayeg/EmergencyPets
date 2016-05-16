@@ -1,34 +1,43 @@
 {% extends "plantillas/perfil.html" %}
-{% block header%}
 {% block name %}{{usuario.getNombre()}}{% endblock %}
-{% endblock %}
-{% block menu %}
-
-{% endblock %}
 {% block contenido %}
-<body class="orange accent-1 container">
-    <div id="profile-page" class="section">
-            <div id="profile-page-sidebar" class="center col s6">
-                <!-- Profile About  -->
-                <div class="col s6">
+<div id="profile-card" class="card">
 
+    <div class="card-content">
+        <i class="mdi-action-account-circle large"></i>
+        <a class="btn-floating activator btn-move-up waves-effect waves-light darken-2 right">
+            <i class="mdi-editor-mode-edit"></i>
+        </a>
 
-                </div>
-                <div class="card white center col s6">
-                    <div class="card-content orange-text">
-                        <span class="card-title">INFORMACION!</span>
-                        <p>{{usuario.getNombre()}}</p>
-                        <p>{{usuario.getApellido()}}</p>
-                        <p>{{usuario.getCedula()}}</p>
-                        <p>{{usuario.getGenero()}}</p>
-                        <p>{{usuario.getEmail()}}</p>
-                        <p>{{usuario.getDireccion()}}</p>
-                        <p>{{usuario.getBarrio()}}</p>
-                    </div>
-                </div>
-            </div>
+        <span class="card-title activator grey-text text-darken-4">
+            {{usuario.getNombre()}}</span>
+        <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i>
+            {{usuario.getNombre()}}</p>
+        <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i>
+            {{usuario.getApellido()}}</p>
+        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i>
+            {{usuario.getTelefono()}}</p>
+        <p><i class="mdi-communication-email cyan-text text-darken-2"></i>
+            {{usuario.getEmail()}}</p>
+
 
     </div>
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">{{usuario.getNombre()}}<i
+                class="mdi-navigation-close right"></i></span>
+        <p>Aquie encontrara mas informacion.</p>
+        <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i>
+            {{usuario.getNombre()}}</p>
+        <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i>
+            {{usuario.getApellido()}}</p>
+        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i>
+            {{usuario.getTelefono()}}</p>
+        <p><i class="mdi-communication-email cyan-text text-darken-2"></i>
+            {{usuario.getEmail()}}</p>
+        <p><i class="mdi-social-cake cyan-text text-darken-2"></i>
+            {{usuario.getFecha_nacimiento()}}</p>
 
-
+    </div>
+</div>
 {% endblock %}
+{% block scripts %} {% endblock %}
