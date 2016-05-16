@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fa4c138-d585-4963-aa08-9d7677ea42eb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Bold.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Bold.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Light.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Light.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Medium.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Medium.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Thin.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Thin.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/materialize_2.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/usuario.py" afterPath="$PROJECT_DIR$/controllers/usuario.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/usuario_dao.py" afterPath="$PROJECT_DIR$/dao/usuario_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/usuario_routes.py" afterPath="$PROJECT_DIR$/routes/usuario_routes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/app.css" afterPath="$PROJECT_DIR$/static/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/materialize.css" afterPath="$PROJECT_DIR$/static/css/materialize.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/materialize.js" afterPath="$PROJECT_DIR$/static/js/materialize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/materialize.min.js" afterPath="$PROJECT_DIR$/static/js/materialize.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/home/index.html" afterPath="$PROJECT_DIR$/views/home/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login/login.html" afterPath="$PROJECT_DIR$/views/login/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/plantillas/emergencia.html" afterPath="$PROJECT_DIR$/views/plantillas/emergencia.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/plantillas/perfil.html" afterPath="$PROJECT_DIR$/views/plantillas/perfil.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/usuarios/perfilU.html" afterPath="$PROJECT_DIR$/views/usuarios/perfilU.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/usuarios/registro.html" afterPath="$PROJECT_DIR$/views/usuarios/registro.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/usuarios/registro1.html" afterPath="$PROJECT_DIR$/views/usuarios/registro1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/usuarios/registro2.html" afterPath="$PROJECT_DIR$/views/usuarios/registro2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/usuarios/registromascota.html" afterPath="$PROJECT_DIR$/views/usuarios/registromascota.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/emergencias/mensaje.html" afterPath="$PROJECT_DIR$/views/emergencias/mensaje.html" />
     </list>
     <ignored path="proyecto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,11 +23,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="perfil.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="perfil.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/plantillas/perfil.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
               <caret line="96" column="70" selection-start-line="96" selection-start-column="70" selection-end-line="96" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mensaje.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/emergencias/mensaje.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="64" column="117" selection-start-line="64" selection-start-column="117" selection-end-line="64" selection-end-column="117" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="emergencia.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/plantillas/emergencia.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="34" column="37" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -101,16 +93,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/home/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="registromascota.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/usuarios/registromascota.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -126,16 +108,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="137">
               <caret line="119" column="85" selection-start-line="119" selection-start-column="64" selection-end-line="119" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="usuario_routes.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/usuario_routes.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -197,7 +169,6 @@
         <option value="$PROJECT_DIR$/views/emergencias/atragantamiento.html" />
         <option value="$PROJECT_DIR$/views/emergencias/traumatismo.html" />
         <option value="$PROJECT_DIR$/routes/emergencia_routes.py" />
-        <option value="$PROJECT_DIR$/views/emergencias/mensaje.html" />
         <option value="$PROJECT_DIR$/dao/mascota_dao.py" />
         <option value="$PROJECT_DIR$/controllers/mascota.py" />
         <option value="$PROJECT_DIR$/controllers/login.py" />
@@ -218,6 +189,7 @@
         <option value="$PROJECT_DIR$/views/usuarios/registromascota.html" />
         <option value="$PROJECT_DIR$/views/usuarios/perfilU.html" />
         <option value="$PROJECT_DIR$/views/plantillas/perfil.html" />
+        <option value="$PROJECT_DIR$/views/emergencias/mensaje.html" />
       </list>
     </option>
   </component>
@@ -357,6 +329,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="emergencias" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -771,13 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/emergencias/mensaje.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="65" column="64" selection-start-line="65" selection-start-column="64" selection-end-line="65" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dto/emergencia_mascota.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -976,14 +945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/plantillas/emergencia.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1749">
-          <caret line="129" column="50" selection-start-line="129" selection-start-column="50" selection-end-line="129" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/home/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
@@ -1060,6 +1021,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="96" column="70" selection-start-line="96" selection-start-column="70" selection-end-line="96" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/plantillas/emergencia.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="34" column="37" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/emergencias/mensaje.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="64" column="117" selection-start-line="64" selection-start-column="117" selection-end-line="64" selection-end-column="117" />
           <folding />
         </state>
       </provider>
