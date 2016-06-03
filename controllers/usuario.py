@@ -46,8 +46,14 @@ class UsuarioController:
             return render_template("usuarios/registro.html")
 
         if UsuarioDao().crear_usuario(usuario):
-            flash("El usuario se creo correctamente.", "success")
-            return render_template("login/login.html")
+
+            mensaje = "BIENVENIDO A EMERGENCY PETS:\ Aqui podras registrar" \
+                      "tu mascota y tener un control con las emergencias que" \
+                      "presente."
+            if EmailController().enviar_email(usuario.getEmail(), mensaje,
+                "Registro Existoso - EmergencyPets"):
+                flash("El usuario se creo correctamente.", "success")
+                return render_template("login/login.html")
         else:
             flash("Error al registrar el usuario.", "error")
         return redirect(url_for("login.get_home"))
