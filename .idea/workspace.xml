@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fa4c138-d585-4963-aa08-9d7677ea42eb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/emails.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/login/cambiar_contraseña.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/login/olvide_contraseña.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/usuarios/listar_mascotas.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/imagenes/logo.png" afterPath="$PROJECT_DIR$/static/imagenes/logo.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/login.py" afterPath="$PROJECT_DIR$/controllers/login.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/mascota.py" afterPath="$PROJECT_DIR$/controllers/mascota.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/usuario.py" afterPath="$PROJECT_DIR$/controllers/usuario.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/mascota_dao.py" afterPath="$PROJECT_DIR$/dao/mascota_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/usuario_dao.py" afterPath="$PROJECT_DIR$/dao/usuario_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dto/usuario.py" afterPath="$PROJECT_DIR$/dto/usuario.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/login_routes.py" afterPath="$PROJECT_DIR$/routes/login_routes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/emergencias/mensaje.html" afterPath="$PROJECT_DIR$/views/emergencias/mensaje.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/home/index.html" afterPath="$PROJECT_DIR$/views/home/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login/login.html" afterPath="$PROJECT_DIR$/views/login/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/plantillas/perfil.html" afterPath="$PROJECT_DIR$/views/plantillas/perfil.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/usuarios/perfilU.html" afterPath="$PROJECT_DIR$/views/usuarios/perfilU.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/usuarios/registro.html" afterPath="$PROJECT_DIR$/views/usuarios/registro.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/usuarios/registro1.html" afterPath="$PROJECT_DIR$/views/usuarios/registro1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/usuarios/registro2.html" afterPath="$PROJECT_DIR$/views/usuarios/registro2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/usuarios/registromascota.html" afterPath="$PROJECT_DIR$/views/usuarios/registromascota.html" />
     </list>
     <ignored path="proyecto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,8 +47,8 @@
       <file leaf-file-name="login.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="77" column="46" selection-start-line="77" selection-start-column="46" selection-end-line="77" selection-end-column="46" />
+            <state relative-caret-position="199">
+              <caret line="77" column="45" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -201,8 +181,8 @@
         <option value="$PROJECT_DIR$/views/login/login.html" />
         <option value="$PROJECT_DIR$/views/login/olvide_contraseña.html" />
         <option value="$PROJECT_DIR$/views/login/cambiar_contraseña.html" />
-        <option value="$PROJECT_DIR$/controllers/login.py" />
         <option value="$PROJECT_DIR$/controllers/emails.py" />
+        <option value="$PROJECT_DIR$/controllers/login.py" />
       </list>
     </option>
   </component>
@@ -646,9 +626,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22383253" sideWeight="0.5055762" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28938907" sideWeight="0.4944238" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28938907" sideWeight="0.4944238" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32636657" sideWeight="0.49739778" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32636657" sideWeight="0.49739778" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19405204" sideWeight="0.50718683" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1044,8 +1024,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="77" column="46" selection-start-line="77" selection-start-column="46" selection-end-line="77" selection-end-column="46" />
+        <state relative-caret-position="199">
+          <caret line="77" column="45" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="45" />
           <folding />
         </state>
       </provider>

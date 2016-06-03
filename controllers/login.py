@@ -75,7 +75,7 @@ class Login:
                 str(usuario_c.getId()) + usuario_c.getCedula()).hexdigest()
             usuario_c.setTokenPassword(token)
             mensaje = "Para realizar el cambio de contraseña en el sistema " \
-                      "haga <a href='https://localhost:5000/cambiar_contrasena/"+ \
+                      "haga <a href='https://emergencypets.herokuapp.com//cambiar_contrasena/"+ \
                       usuario_c.getTokenPassword() + "'>clic aquí.</a>"
             if EmailController().enviar_email(
                     usuario_c.getEmail(), mensaje,
