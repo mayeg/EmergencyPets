@@ -24,6 +24,6 @@ def get_traumatismo():
 def get_mensaje():
     if request.method == "GET":
         return UsuarioController().get_mensaje_privado()
-    mensaje = request.form.get('cedula', None)
+    mensaje = request.form.get('mensaje', None)
     id = session['usuario']['id']
-    return UsuarioController().enviarMensajeDoc(mensaje,id)
+    return UsuarioController().enviarMensajeDoc(mensaje, id)

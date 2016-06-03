@@ -49,14 +49,15 @@
                 </div>
                 <div class="cad-panel col s8 ">
                     <form class="form-horizontal "
-                          action="emergencia/mensaje" method="POST">
+                          action="/emergencia/mensaje" method="POST">
                         <div class="row margin">
                             <div class="input-field col s12">
                                 <i class="mdi-social-person-outline prefix"></i>
                     <textarea id="textarea" class="materialize-textarea"
                               name="mensaje">
                         </textarea>
-                                <label for="textarea" class="center-align">Mensaje</label>
+                                <label for="textarea" class="center-align"
+                                name="mensaje">Mensaje</label>
                             </div>
                         </div>
                         <div class="row">

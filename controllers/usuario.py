@@ -79,7 +79,7 @@ class UsuarioController:
         else:
             msg = u"Error al enviar el correo."
         flash(msg, type_flash)
-        return self.get_mensaje_privado()
+        return redirect(url_for("emergencia.get_mensaje"))
 
 
 
