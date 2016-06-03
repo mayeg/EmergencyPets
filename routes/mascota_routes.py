@@ -23,3 +23,10 @@ def registro_mascota():
     return MascotaController().crear_mascota(nombre, dueno, fecha_nacimiento,
                                              raza, genero, vacunas, foto,
                                              especie, peso_aprox)
+
+
+@mascota.route("/listar", methods=["GET"])
+def listar_mascotas():
+    return MascotaController().mascotas_usuario()
+
+

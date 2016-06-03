@@ -39,3 +39,4 @@ def registro_usuario2():
 def perfil_usuario():
     id = session['usuario']['id']
     return UsuarioController().get_perfil(id)
+
