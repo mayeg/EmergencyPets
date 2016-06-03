@@ -6,7 +6,7 @@
           content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="msapplication-tap-highlight" content="no">
-    <title>INICIO DE SESION</title>
+    <title>OLVIDE MI CONTRASEÑA</title>
     <!-- CORE CSS-->
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/materialize.css') }}">
@@ -45,13 +45,13 @@
 <!-- End Page Loading -->
 <div id="login-page" class="row">
     <div class="col s12 z-depth-4 card-panel">
-        <form class="login-form" action="/login" method="POST">
+        <form class="login-form" action="/olvide_contrasena" method="POST">
             <div class="row">
                 <div class="input-field col s12 center">
                     <img src="/static/imagenes/logo.png" alt=""
                          class="img responsive-img valign profile-image-login">
                     <p class="center login-form-text orange-tex tex-lighten-1">
-                        INICIA SESION</p>
+                        OLVIDE MI CONTRASEÑA</p>
                 </div>
             </div>
             <div class="row margin">
@@ -61,33 +61,21 @@
                     <label for="email" class="center-align">Email</label>
                 </div>
             </div>
-            <div class="row margin">
-                <div class="input-field col s12">
-                    <i class="mdi-action-lock-outline prefix"></i>
-                    <input id="contrasena" type="password" name="contrasena">
-                    <label for="contrasena">Contraseña</label>
-                </div>
-            </div>
+
             <div class="row">
                 <div class="input-field col s12 center">
                     <button class="btn waves-effect waves-light deep-orange lighten-2 " type="submit">
-                        Iniciar sesion
+                        Enviar
                         <i class="mdi-content-send right"></i>
                     </button>
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s6 m6 l6">
-                    <p class="margin medium-small"><a
-                            class="orange-tex tex-lighten-1"
-                            href="usuarios/registro"> Registrate!</a></p>
-                </div>
                 <div class="input-field col s6 m6 l6">
                     <p class="margin right-align medium-small ">
-                        <a href="/olvide_contrasena" class="orange-tex tex-lighten-1">
-                        Olvidaste tu contraseña?</a></p>
+                        <a href="/login" class="orange-tex tex-lighten-1">
+                        Inicia sesion</a></p>
                 </div>
             </div>
+
         </form>
     </div>
 </div>

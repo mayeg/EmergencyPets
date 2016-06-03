@@ -15,7 +15,11 @@ class UsuarioDao:
             data = self.__cur.fetchone()
             if data is None:
                 return None
-            return Usuario(id=data[0], email=data[5], contrasena=data[10])
+            return Usuario(id=data[0], cedula=data[1], nombre=data[2],
+                           apellido=data[3], genero=data[4], email=data[5],
+                           barrio=data[6], direccion=data[7],
+                           fecha_nacimiento=data[8], telefono=data[9],
+                           contrasena=data[10])
         except Exception as e:
             print e.message, e.__class__
             return None
@@ -53,13 +57,11 @@ class UsuarioDao:
             return None
 
     def crear_usuario(self, usuario):
-        print "llego al dao"
         try:
             query = "INSERT INTO usuario (cedula, nombre, apellido, " \
                     "genero, email, barrio, direccion, fecha_nacimiento," \
                     "telefono, contrasena) VALUES (%s, %s, %s, %s, %s" \
                     ", %s, %s, %s, %s, %s)"
-
             param = (usuario.getCedula(), usuario.getNombre(),
                      usuario.getApellido(), usuario.getGenero(),
                      usuario.getEmail(), usuario.getBarrio(),
@@ -88,4 +90,53 @@ class UsuarioDao:
                            contrasena=data[10])
         except Exception as e:
             print e.message
+            return
+
+    def get_usuario_por_token(self, usuario):
+        try:
+            query = "SELECT * FROM usuario WHERE token_password = %s"
+            param = (usuario.getTokenPassword(),)
+            self.__cur.execute(query, param)
+            data = self.__cur.fetchone()
+            if data is None:
+                return None
+            return Usuario(id=data[0], cedula=data[1], nombre=data[2],
+                           apellido=data[3], genero=data[4], email=data[5],
+                           barrio=data[6], direccion=data[7],
+                           fecha_nacimiento=data[8], telefono=data[9],
+                           contrasena=data[10])
+        except Exception as e:
+            print e.message
             return None
+
+    def editar_usuario(self, usuario):
+        try:
+            query = "UPDATE usuario SET cedula= %s, nombre= %s, apellido= %s," \
+                    "genero= %s, email= %s, barrio= %s, direccion= %s, " \
+                    "fecha_nacimiento= %s, telefono= %s, token_password= %s" \
+                    " WHERE id=%s "
+            param = (usuario.getCedula(), usuario.getNombre(), usuario.getApellido(),
+                     usuario.getGenero(), usuario.getEmail(), usuario.getBarrio(),
+                     usuario.getDireccion(), usuario.getFecha_nacimiento(),
+                     usuario.getTelefono(), usuario.getTokenPassword(),
+                     int(usuario.getId()))
+            self.__cur.execute(query, param)
+            self.__conn.commit()
+            return True
+        except Exception as e:
+            print e.__class__, e.message
+            return False
+
+    def cambiar_recordar_contrasena(self, usuario):
+        try:
+            query = "UPDATE usuario SET contraseña = %s, token_password= %s " \
+                    "WHERE id=%s"
+            param = (usuario.getContrasena(), usuario.getTokenPassword(),
+                     usuario.getId())
+            self.__cur.execute(query, param)
+            self.__conn.commit()
+            return True
+        except Exception as e:
+            print e.__class__
+            return False
+

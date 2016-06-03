@@ -34,55 +34,57 @@
             </ul>
         </div>
     </nav>
-        <div class="section">
-            <div class="container">
-                <h3 class="header center orange-text">PIDE AYUDA A UN
-                    PROFESIONAL</h3>
-            </div>
-        </div>
+    <div class="section">
         <div class="container">
-            <div class="section">
-                <div class="row">
-                    <div class=" card-panel col s4 l4 m4 orange accent-1">
-                        <img src="/static/imagenes/gatoyperro.jpg"
-                             class="img responsive-img">
-                    </div>
-                    <div class="cad-panel col s8 ">
-                        <form class="form-horizontal "
-                              action="emergencia/mensaje" method="POST">
-                            <div class="row margin">
-                                <div class="input-field col s12">
-                                    <i class="mdi-social-person-outline prefix"></i>
+            <h3 class="header center orange-text">PIDE AYUDA A UN
+                PROFESIONAL</h3>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section">
+            <div class="row">
+                <div class=" card-panel col s4 l4 m4 orange accent-1">
+                    <img src="/static/imagenes/gatoyperro.jpg"
+                         class="img responsive-img">
+                </div>
+                <div class="cad-panel col s8 ">
+                    <form class="form-horizontal "
+                          action="emergencia/mensaje" method="POST">
+                        <div class="row margin">
+                            <div class="input-field col s12">
+                                <i class="mdi-social-person-outline prefix"></i>
                     <textarea id="textarea" class="materialize-textarea"
                               name="mensaje">
                         </textarea>
-                                    <label for="textarea" class="center-align">Mensaje</label>
-                                </div>
+                                <label for="textarea" class="center-align">Mensaje</label>
                             </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input type="submit"
-                                           class="btn waves-effect waves-light col s12 grey-tex deep-orange lighten-2"
-                                           value="Enviar Mensaje">
-                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 center">
+                                <button class="btn waves-effect waves-light deep-orange lighten-2 "
+                                        type="submit">
+                                    Enviar Mensaje
+                                    <i class="mdi-content-send right"></i>
+                                </button>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <!-- START FOOTER -->
+    </div>
+    <!-- START FOOTER -->
 
-        <footer class="page-footer deep-orange lighten-2">
+    <footer class="page-footer deep-orange lighten-2">
 
-            <div class="footer-copyright">
-                <div class="container">
-                    Hecho por <a class="orange-text text-lighten-3"
-                                 href="http://ingsistemas.ufps.edu.co/">Universidad
-                    Francisco de Paula Santander</a>
-                </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Hecho por <a class="orange-text text-lighten-3"
+                             href="http://ingsistemas.ufps.edu.co/">Universidad
+                Francisco de Paula Santander</a>
             </div>
-        </footer>
+        </div>
+    </footer>
 </div>
 
 <script src="{{ url_for('static', filename='js/jquery-1.11.2.min.js') }}"></script>
@@ -100,6 +102,7 @@
 <script>
   $('#textarea1').val('New Text');
   $('#textarea1').trigger('autoresize');
+
 
 
 </script>

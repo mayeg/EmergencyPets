@@ -4,7 +4,7 @@ class Usuario:
 
     def __init__(self, id=0,  cedula="", nombre="", apellido="", genero="",
                  email="", barrio="", direccion="", fecha_nacimiento="",
-                 telefono="", contrasena=""):
+                 telefono="", contrasena="", token_password=""):
         self.__id = id
         self.__nombre = nombre
         self.__apellido = apellido
@@ -16,6 +16,7 @@ class Usuario:
         self.__fecha_nacimiento = fecha_nacimiento
         self.__telefono = telefono
         self.__contrasena = contrasena
+        self.__token_password = token_password
 
     def getId(self):
         return self.__id
@@ -82,6 +83,12 @@ class Usuario:
 
     def setContrasena(self, contrasena):
         self.__contrasena = contrasena
+
+    def getTokenPassword(self):
+        return self.__token_password
+
+    def setTokenPassword(self, token):
+        self.__token_password = token
 
     def __unicode__(self):
         return "email: {}, contrasena:{}".format(

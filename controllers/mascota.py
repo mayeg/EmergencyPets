@@ -39,3 +39,11 @@ class MascotaController:
         else:
             flash("Error al registrar el mascota.", "error")
         return redirect(url_for("login.get_home"))
+
+    def mascotas_usuario(self):
+        id = session['usuario']['id']
+        nombre = session['usuario']['nombre']
+        usuario = Usuario(id=id, nombre=nombre)
+        mascotas = MascotaDao().listar_mascotas(usuario)
+        render_template("usuario/listar_mascotas.html", usuario=usuario,
+                        mascotas=mascotas)

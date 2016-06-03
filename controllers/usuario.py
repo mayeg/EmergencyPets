@@ -2,6 +2,8 @@
 import hashlib
 
 from flask.helpers import flash
+
+from dao.mascota_dao import MascotaDao
 from dao.usuario_dao import UsuarioDao
 from flask import render_template, redirect, url_for, session
 from dto.usuario import Usuario
@@ -27,7 +29,6 @@ class UsuarioController:
 
         return render_template("usuarios/registro2.html")
 
-
     def crear_usuario(self, cedula, nombre, apellido, genero, email, barrio,
                       direccion, fecha_nacimiento, telefono, contrasena):
         contrasena_c = hashlib.sha1(contrasena).hexdigest()
@@ -44,7 +45,6 @@ class UsuarioController:
             return render_template("usuarios/registro.html")
 
         if UsuarioDao().crear_usuario(usuario):
-            print "crea el usuario"
             flash("El usuario se creo correctamente.", "success")
             return render_template("login/login.html")
         else:
@@ -55,7 +55,6 @@ class UsuarioController:
         return render_template("plantillas/emergencia.html")
 
     def get_emergencia_atraganta(self):
-        print "entro al metodo"
         return render_template("emergencias/atragantamiento.html")
 
     def get_emergencia_traumatismo(self):
@@ -67,3 +66,6 @@ class UsuarioController:
 
     def get_mensaje_privado(self):
         return render_template("emergencias/mensaje.html")
+
+
+

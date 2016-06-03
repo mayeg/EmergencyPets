@@ -110,7 +110,7 @@
                             </ul>
                             <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn"
                                href="#" data-activates="profile-dropdown">
-                                {% block name %} {% endblock %}
+                                {% block name %}{{nombre}} {% endblock %}
                                 <i class="mdi-navigation-arrow-drop-down right"></i>
                             </a>
                             <p class="user-roal">Online</p>
@@ -139,6 +139,19 @@
                     class="mdi-navigation-menu"></i></a>
         </aside>
         <section id="content">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div id="notificacion">
+            {% for category, message in messages %}
+            <div class="alert alert-{{category}}">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                {{message}}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith
+        %}
             {% block contenido %} {% endblock %}
         </section>
     </div>

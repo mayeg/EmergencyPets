@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from dto.mascota import Mascota
+from dto.usuario import Usuario
 
 
 class MascotaDao:
@@ -19,9 +20,6 @@ class MascotaDao:
                          mascota.getGenero(), mascota.getVacunas(),
                          mascota.getFoto(), mascota.getEspecie(),
                          mascota.getPeso_aprox())
-
-                print param
-
                 self.__cur.execute(query, param)
                 self.__conn.commit()
                 return True
@@ -29,3 +27,27 @@ class MascotaDao:
                 print e.__class__
                 print e.message
                 return False
+
+    def listar_mascotas(self, usuario):
+        try:
+            query = "SELECT * FROM mascota WHERE dueno=%s"
+            param = (int(usuario.getId()),)
+            self.__cur.execute(query, param)
+            data = self.__cur.fetchall()
+            resultado = list()
+            if data is None:
+                return []
+            for mascota in data:
+                masco = Mascota(id=mascota[0], dueno=mascota[1], nombre=mascota[2],
+                                fecha_nacimiento=mascota[3], raza=mascota[4],
+                                genero=mascota[5], especie=mascota[8],
+                                peso_aprox=mascota[9])
+
+                user = Usuario(id=mascota[10], nombre=mascota[12], email=mascota[15])
+                masco.setDueno(user.getId())
+                resultado.append(masco)
+            return resultado
+
+        except Exception as e:
+            print e.message
+            return []

@@ -1,109 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>EmergencyPets</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>EmergencyPets</title>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet"
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet"
           href="{{ url_for('static', filename='css/materialize_2.css') }}">
-  <link rel="stylesheet"
+    <link rel="stylesheet"
           href="{{ url_for('static', filename='css/style.css') }}">
-  <link rel="stylesheet"
+    <link rel="stylesheet"
           href="{{ url_for('static', filename='css/app.css') }}">
 
 </head>
 <body>
-  <nav class="deep-orange lighten-2" role="navigation">
-    <div class="nav-wrapper container" >
+<nav class="deep-orange lighten-2" role="navigation">
+    <div class="nav-wrapper container">
         <ul class="brand-logo"><a class="brand-logo"> </a>
-        <a id="logo-container" href="/" class="brand-logo">EMERGENCY PETS</a>
-       </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="">Registrate</a></li>
-      </ul>
-       <a href="#" data-activates="nav-mobile" class="button-collapse">
-           <i class="material-icons">menu</i></a>
+            <a id="logo-container" href="/" class="brand-logo">EMERGENCY
+                PETS</a>
+        </ul>
     </div>
-  </nav>
-  <div class="section no-pad-bot" id="index-banner">
+</nav>
+<div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <br><br>
-      <h3 class="header center orange-text">¿QUE TIPO DE MASCOTA TIENES?</h3>
-      <div class="row center">
-      </div>
-      <br><br>
+        <br><br>
+        <h3 class="header center orange-text">¿QUE TIPO DE MASCOTA TIENES?</h3>
+        <div class="row center">
+        </div>
+        <br><br>
 
     </div>
-  </div>
-  <div class="container">
+</div>
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div id="notificacion">
+        {% for category, message in messages %}
+        <div class="alert alert-{{category}}">
+            <button type="button" class="close" data-dismiss="alert"
+                    aria-hidden="true">×
+            </button>
+            {{message}}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith
+    %}
     <div class="section">
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4 grid">
-                  <figure class="effect-lily">
-                    <img src="static/imagenes/perro.jpg" alt="" class="img responsive-img">
+        <!--   Icon Section   -->
+        <div class="row">
+            <div class="col s12 m4 grid">
+                <figure class="effect-lily">
+                    <img src="static/imagenes/perro.jpg" alt=""
+                         class="img responsive-img">
                     <figcaption>
-                      <div>
-                        <h2> <span>PERRO</span></h2>
-                      </div>
-                      <a href="usuarios/registro">Ver mas</a>
+                        <div>
+                            <h2><span>PERRO</span></h2>
+                        </div>
+                        <a href="usuarios/registro">Ver mas</a>
                     </figcaption>
-                  </figure>
-        </div>
-        <div class="col s12 m4 grid">
-                  <figure class="effect-lily">
-                    <img src="static/imagenes/gatoyperro2.jpg" alt="" class="img responsive-img">
+                </figure>
+            </div>
+            <div class="col s12 m4 grid">
+                <figure class="effect-lily">
+                    <img src="static/imagenes/gatoyperro2.jpg" alt=""
+                         class="img responsive-img">
                     <figcaption>
-                      <div>
-                        <h2> <span>GATO</span></h2>
-                      </div>
-                      <a href="usuarios/registro1">Ver mas</a>
+                        <div>
+                            <h2><span>GATO</span></h2>
+                        </div>
+                        <a href="usuarios/registro1">Ver mas</a>
                     </figcaption>
-                  </figure>
-        </div>
-          <div class="col s12 m4 grid">
-                  <figure class="effect-lily">
-                    <img src="static/imagenes/gatoyperro3.jpg" alt="" class="img responsive-img">
+                </figure>
+            </div>
+            <div class="col s12 m4 grid">
+                <figure class="effect-lily">
+                    <img src="static/imagenes/gatoyperro3.jpg" alt=""
+                         class="img responsive-img">
                     <figcaption>
-                      <div>
-                        <h2> <span>AMBOS</span></h2>
-                      </div>
-                    <a href="usuarios/registro2">Ver mas</a>
+                        <div>
+                            <h2><span>AMBOS</span></h2>
+                        </div>
+                        <a href="usuarios/registro2">Ver mas</a>
                     </figcaption>
-                  </figure>
+                </figure>
+            </div>
+
         </div>
+        <br><br>
 
+        <div class="section">
+            <div class="center">
+                <div class="container">
+                    <a class="center-text text-lighten-3" href="/login"> INICIA
+                        SESION |</a>
+                    <a class="center-text text-lighten-3" href="#">
+                        ADOPTAME.</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <br><br>
 
-    <div class="section">
-    <div class="center">
-      <div class="container">
-       <a class="center-text text-lighten-3" href="/login"> INICIA SESION |</a>
-       <a class="center-text text-lighten-3" href="#"> ADOPTAME.</a>
-      </div>
-    </div>
-    </div>
-  </div>
+    <footer class="page-footer deep-orange lighten-2">
 
-  <footer class="page-footer deep-orange lighten-2">
+        <div class="footer-copyright">
+            <div class="container">
+                Hecho por <a class="orange-text text-lighten-3"
+                             href="http://ingsistemas.ufps.edu.co/">Universidad
+                Francisco de Paula Santander</a>
+            </div>
+        </div>
+    </footer>
+</div>
 
-    <div class="footer-copyright">
-      <div class="container">
-      Hecho por <a class="orange-text text-lighten-3" href="http://ingsistemas.ufps.edu.co/">Universidad Francisco de Paula Santander</a>
-      </div>
-    </div>
-  </footer>
-  </div>
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="{{ url_for('static', filename='js/init.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
-  </body>
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="{{ url_for('static', filename='js/init.js') }}"></script>
+<script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+</body>
 </html>
