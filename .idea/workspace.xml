@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9fa4c138-d585-4963-aa08-9d7677ea42eb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/mascota.py" afterPath="$PROJECT_DIR$/controllers/mascota.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/mascota_dao.py" afterPath="$PROJECT_DIR$/dao/mascota_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/usuarios/listar_mascotas.html" afterPath="$PROJECT_DIR$/views/usuarios/listar_mascotas.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/usuarios/registro.html" afterPath="$PROJECT_DIR$/views/usuarios/registro.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/emails.py" afterPath="$PROJECT_DIR$/controllers/emails.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/usuario.py" afterPath="$PROJECT_DIR$/controllers/usuario.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/emergencia_routes.py" afterPath="$PROJECT_DIR$/routes/emergencia_routes.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/usuario_routes.py" afterPath="$PROJECT_DIR$/routes/usuario_routes.py" />
     </list>
     <ignored path="proyecto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,41 +27,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/login/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1548">
-              <caret line="86" column="51" selection-start-line="86" selection-start-column="51" selection-end-line="86" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="perfil.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/plantillas/perfil.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="123" column="58" selection-start-line="123" selection-start-column="58" selection-end-line="123" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="perfilU.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/usuarios/perfilU.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-550">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listar_mascotas.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="listar_mascotas.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/usuarios/listar_mascotas.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="344">
               <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/login.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="88" column="17" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -77,21 +57,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/app.css">
+      <file leaf-file-name="usuario_routes.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/usuario_routes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="19">
+              <caret line="12" column="45" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="materialize.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/materialize.css">
+      <file leaf-file-name="emergencia_routes.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/emergencia_routes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="4841" column="1" selection-start-line="4841" selection-start-column="1" selection-end-line="4841" selection-end-column="32" />
+            <state relative-caret-position="288">
+              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="usuario.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/usuario.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -110,8 +102,18 @@
       <file leaf-file-name="mascota.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/mascota.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+            <state relative-caret-position="450">
+              <caret line="47" column="56" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="emails.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/emails.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -167,7 +169,6 @@
         <option value="$PROJECT_DIR$/static/js/registro.js" />
         <option value="$PROJECT_DIR$/views/emergencias/atragantamiento.html" />
         <option value="$PROJECT_DIR$/views/emergencias/traumatismo.html" />
-        <option value="$PROJECT_DIR$/routes/emergencia_routes.py" />
         <option value="$PROJECT_DIR$/static/css/materialize.min.css" />
         <option value="$PROJECT_DIR$/static/css/materialize.css" />
         <option value="$PROJECT_DIR$/static/css/app.css" />
@@ -178,22 +179,23 @@
         <option value="$PROJECT_DIR$/views/usuarios/registro1.html" />
         <option value="$PROJECT_DIR$/views/usuarios/registro2.html" />
         <option value="$PROJECT_DIR$/views/usuarios/registromascota.html" />
-        <option value="$PROJECT_DIR$/controllers/usuario.py" />
         <option value="$PROJECT_DIR$/routes/login_routes.py" />
         <option value="$PROJECT_DIR$/views/home/index.html" />
         <option value="$PROJECT_DIR$/views/login/login.html" />
         <option value="$PROJECT_DIR$/views/login/olvide_contraseña.html" />
         <option value="$PROJECT_DIR$/views/login/cambiar_contraseña.html" />
-        <option value="$PROJECT_DIR$/controllers/emails.py" />
         <option value="$PROJECT_DIR$/controllers/login.py" />
         <option value="$PROJECT_DIR$/dao/usuario_dao.py" />
-        <option value="$PROJECT_DIR$/routes/usuario_routes.py" />
         <option value="$PROJECT_DIR$/views/plantillas/perfil.html" />
         <option value="$PROJECT_DIR$/views/usuarios/registro.html" />
         <option value="$PROJECT_DIR$/dao/mascota_dao.py" />
         <option value="$PROJECT_DIR$/routes/mascota_routes.py" />
-        <option value="$PROJECT_DIR$/controllers/mascota.py" />
         <option value="$PROJECT_DIR$/views/usuarios/listar_mascotas.html" />
+        <option value="$PROJECT_DIR$/controllers/mascota.py" />
+        <option value="$PROJECT_DIR$/routes/usuario_routes.py" />
+        <option value="$PROJECT_DIR$/routes/emergencia_routes.py" />
+        <option value="$PROJECT_DIR$/controllers/emails.py" />
+        <option value="$PROJECT_DIR$/controllers/usuario.py" />
       </list>
     </option>
   </component>
@@ -565,14 +567,14 @@
     <frame x="-1" y="30" width="1368" height="739" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28698885" sideWeight="0.49281314" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28550187" sideWeight="0.49281314" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22383253" sideWeight="0.5055762" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28985506" sideWeight="0.4944238" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28985506" sideWeight="0.4944238" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3258427" sideWeight="0.49739778" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3252818" sideWeight="0.49739778" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19405204" sideWeight="0.50718683" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -735,13 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/emergencia_routes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/plantillas/emergencia.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2016">
@@ -774,13 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/usuario.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -841,36 +829,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/emails.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="43" column="62" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
-          <folding>
-            <element signature="e#1#15#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dao/usuario_dao.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2358">
           <caret line="131" column="49" selection-start-line="131" selection-start-column="49" selection-end-line="131" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/usuario_routes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -947,18 +909,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/mascota.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/usuarios/listar_mascotas.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
           <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/mascota.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="47" column="56" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/usuario_routes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/emergencia_routes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/emails.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="88" column="17" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/usuario.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
           <folding />
         </state>
       </provider>

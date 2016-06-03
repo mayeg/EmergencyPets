@@ -1,6 +1,9 @@
 from flask.blueprints import Blueprint
 from flask import request, redirect, url_for
+from flask.globals import session
+
 from controllers.usuario import  UsuarioController
+from dao.usuario_dao import UsuarioDao
 
 emergencia = Blueprint("emergencia", __name__)
 
@@ -19,4 +22,8 @@ def get_traumatismo():
 
 @emergencia.route("/mensaje", methods=["GET","POST"])
 def get_mensaje():
-    return UsuarioController().get_mensaje_privado()
+    if request.method == "GET":
+        return UsuarioController().get_mensaje_privado()
+    mensaje = request.form.get('cedula', None)
+    id = session['usuario']['id']
+    return UsuarioController().enviarMensajeDoc(mensaje,id)

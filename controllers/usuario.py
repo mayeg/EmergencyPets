@@ -3,6 +3,7 @@ import hashlib
 
 from flask.helpers import flash
 
+from controllers.emails import EmailController
 from dao.mascota_dao import MascotaDao
 from dao.usuario_dao import UsuarioDao
 from flask import render_template, redirect, url_for, session
@@ -66,6 +67,20 @@ class UsuarioController:
 
     def get_mensaje_privado(self):
         return render_template("emergencias/mensaje.html")
+
+    def enviarMensajeDoc(self, mensaje, id):
+        usuario = UsuarioDao().get_usuario_id(id)
+        para = 'veterinariacucuta@gmail.com'
+        if EmailController().enviar_email(
+                para, mensaje+" correo del usuario: "+usuario.getEmail(),
+                "Solicitud Consulta - EmergencyPets"):
+                msg = u" Se envio correctamente el correo."
+                type_flash = "success"
+        else:
+            msg = u"Error al enviar el correo."
+        flash(msg, type_flash)
+        return self.get_mensaje_privado()
+
 
 
 
