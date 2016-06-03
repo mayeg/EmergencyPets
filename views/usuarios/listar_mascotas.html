@@ -1,7 +1,10 @@
+{% extends "plantillas/perfil.html" %}
+{% block name %}{{usuario.getNombre()}}{% endblock %}
+{% block contenido %}
 <div class="row" style="margin-bottom: 15px">
-    <div class="col-md-12 text-right">
-        <a href="/mascota/registro" class="btn btn-primary">
-            <i class="fa fa-plus"></i> Registrar Mascota
+    <div class="col m 12 text-right">
+        <a href="/mascota/registro" class="btn waves-effect waves-light deep-orange lighten-2">
+            <i class="mdi-social-group-add"></i> Registrar Mascota
         </a>
     </div>
 </div>
@@ -11,7 +14,7 @@
     </div>
     <div class="box-body">
         {% if mascotas %}
-        <table class="table table-hover table-bordered">
+        <table class="striped responsive-table ">
             <tr>
                 <th class="text-center">Nombre</th>
                 <th class="text-center">Dueño</th>
@@ -33,25 +36,22 @@
                 <td>{{mascota.getPeso_aprox()}}</td>
                 <td class="text-center">
                     <a href="/usuarios/editar/{{usuario.getId()}}"
-                       class="btn btn-default"><i class="mdi-editor-border-color"></i></a>
+                       class="btn waves-effect waves-light deep-orange lighten-2">
+                        <i class="mdi-editor-border-color"></i></a>
                     <a href="/usuarios/eliminar/{{usuario.getId()}}"
-                       class="btn btn-default"><i class="mdi-action-pageview"></i></a>
+                       class="btn waves-effect waves-light deep-orange lighten-2">
+                        <i class="mdi-action-pageview"></i></a>
                 </td>
             </tr>
             {% endfor %}
         </table>
         {% else %}
-        <div class="col-md-12">
+        <div class="col m 12" >
             <div class="alert alert-info">
-                No existen usuarios registrados en el sistema.
+                Aun no has registrado una mascota al sistema.
             </div>
         </div>
         {% endif %}
     </div>
-    <!-- /.box-body -->
-    <div class="box-footer">
-        Total de usuarios {{total_usuarios}}.
-    </div>
-    <!-- /.box-footer-->
 </div>
 {% endblock %}

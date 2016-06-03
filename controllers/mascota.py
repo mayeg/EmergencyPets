@@ -46,5 +46,5 @@ class MascotaController:
         nombre = session['usuario']['nombre']
         usuario = Usuario(id=ide, nombre=nombre)
         mascotas = MascotaDao().listar_mascotas(usuario)
-        render_template("usuario/listar_mascotas.html", usuario=usuario,
+        render_template("usuarios/listar_mascotas.html", usuario=usuario,
                         mascotas=mascotas)

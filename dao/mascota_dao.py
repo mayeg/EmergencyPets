@@ -42,12 +42,9 @@ class MascotaDao:
                                 fecha_nacimiento=mascota[3], raza=mascota[4],
                                 genero=mascota[5], especie=mascota[8],
                                 peso_aprox=mascota[9])
-
-                user = Usuario(id=mascota[10], nombre=mascota[12], email=mascota[15])
-                masco.setDueno(user.getId())
                 resultado.append(masco)
             return resultado
 
         except Exception as e:
-            print e.message
+            print e.message, e.__class__
             return []
