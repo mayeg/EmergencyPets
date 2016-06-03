@@ -129,7 +129,7 @@ class UsuarioDao:
 
     def cambiar_recordar_contrasena(self, usuario):
         try:
-            query = "UPDATE usuario SET contraseña = %s, token_password= %s " \
+            query = "UPDATE usuario SET contrasena = %s, token_password= %s " \
                     "WHERE id=%s"
             param = (usuario.getContrasena(), usuario.getTokenPassword(),
                      usuario.getId())
