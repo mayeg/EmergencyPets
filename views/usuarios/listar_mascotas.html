@@ -1,57 +1,62 @@
 {% extends "plantillas/perfil.html" %}
 {% block name %}{{usuario.getNombre()}}{% endblock %}
 {% block contenido %}
-<div class="row" style="margin-bottom: 15px">
-    <div class="col m 12 text-right">
-        <a href="/mascotas/registro" class="btn waves-effect waves-light deep-orange lighten-2">
-            <i class="mdi-social-group-add"></i> Registrar Mascota
-        </a>
-    </div>
-</div>
-<div class="box box-primary">
-    <div class="box-header with-border">
-        <h3 class="box-title">Lista de Mascotas</h3>
-    </div>
-    <div class="box-body">
-        {% if mascotas %}
-        <table class="striped responsive-table ">
-            <tr>
-                <th class="text-center">Nombre</th>
-                <th class="text-center">Dueño</th>
-                <th class="text-center">Raza</th>
-                <th class="text-center">Fecha_nacimiento</th>
-                <th class="text-center">Genero</th>
-                <th class="text-center">Especie</th>
-                <th class="text-center">Peso</th>
-                <th class="text-center">Opciones</th>
-            </tr>
-            {% for mascota in mascotas %}
-            <tr>
-                <td>{{mascota.getNombre()}}</td>
-                <td>{{mascota.getDueno().getId()}}</td>
-                <td>{{mascota.getRaza()}}</td>
-                <td>{{mascota.getFecha_nacimiento()}}</td>
-                <td>{{mascota.getGenero()}}</td>
-                <td>{{mascota.getEspecie(),}}</td>
-                <td>{{mascota.getPeso_aprox()}}</td>
-                <td class="text-center">
-                    <a href="/usuarios/editar/{{usuario.getId()}}"
-                       class="btn waves-effect waves-light deep-orange lighten-2">
-                        <i class="mdi-editor-border-color"></i></a>
-                    <a href="/usuarios/eliminar/{{usuario.getId()}}"
-                       class="btn waves-effect waves-light deep-orange lighten-2">
-                        <i class="mdi-action-pageview"></i></a>
-                </td>
-            </tr>
-            {% endfor %}
-        </table>
-        {% else %}
-        <div class="col m 12" >
-            <div class="alert alert-info">
-                Aun no has registrado una mascota al sistema.
-            </div>
+<div class="coniatner">
+    <div class="row" style="margin-bottom: 15px">
+        <div class="col m 12 text-right">
+            <a href="/mascotas/registro"
+               class="btn waves-effect waves-light deep-orange lighten-2">
+                <i class="mdi-social-group-add"></i> Registrar Mascota
+            </a>
         </div>
-        {% endif %}
     </div>
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">Lista de Mascotas</h3>
+        </div>
+        <div class="box-body">
+            {% if mascotas %}
+            <table class="striped responsive-table ">
+                <tr>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Dueño</th>
+                    <th class="text-center">Raza</th>
+                    <th class="text-center">Fecha_nacimiento</th>
+                    <th class="text-center">Genero</th>
+                    <th class="text-center">Especie</th>
+                    <th class="text-center">Peso(kg)</th>
+                    <th class="text-center">Opciones</th>
+                </tr>
+                {% for mascota in mascotas %}
+                <tr>
+                    <td>{{mascota.getNombre()}}</td>
+                    <td>{{mascota.getDueno().getId()}}</td>
+                    <td>{{mascota.getRaza()}}</td>
+                    <td>{{mascota.getFecha_nacimiento()}}</td>
+                    <td>{{mascota.getGenero()}}</td>
+                    <td>{{mascota.getEspecie(),}}</td>
+                    <td>{{mascota.getPeso_aprox()}}</td>
+                    <td class="text-center">
+                        <a href="/"
+                           class="btn waves-effect waves-light deep-orange lighten-2">
+                            <i class="mdi-editor-border-color"></i></a>
+                        <a href="/}"
+                           class="btn waves-effect waves-light deep-orange lighten-2">
+                            <i class="mdi-action-pageview"></i></a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+            <div class="col m 12">
+                <div class="alert alert-info">
+                    Aun no has registrado una mascota al sistema.
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
 </div>
+
 {% endblock %}
