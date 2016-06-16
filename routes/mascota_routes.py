@@ -1,5 +1,7 @@
 from flask.blueprints import Blueprint
 from flask import request, session
+from flask.helpers import flash
+from werkzeug.utils import redirect
 
 from controllers.mascota import MascotaController
 
@@ -17,11 +19,14 @@ def registro_mascota():
     raza = request.form.get('raza', None)
     genero = request.form.get('genero', None)
     vacunas = request.form.get('vacunas', None)
-    foto = request.form.get('foto', None)
+    file = request.files['foto']
+    if file.filename == '':
+        flash('No selecciono el archivo', 'Error')
+        return redirect(request.url)
     especie = request.form.get('especie', None)
     peso_aprox = request.form.get('peso_aprox', None)
     return MascotaController().crear_mascota(nombre, dueno, fecha_nacimiento,
-                                             raza, genero, vacunas, foto,
+                                             raza, genero, vacunas, file,
                                              especie, peso_aprox)
 
 

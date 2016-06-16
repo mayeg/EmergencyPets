@@ -1,17 +1,18 @@
 # -*- coding: utf-8 -*-
 import os
-
 from flask import Flask
 from flaskext.mysql import MySQL
-
 from routes.emergencia_routes import emergencia
 from routes.login_routes import login_r
 from routes.usuario_routes import usuario
 from routes.mascota_routes import mascota
 
 tmpl_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'views')
+UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                             'uploads')
 app = Flask(__name__, template_folder=tmpl_dir)
 app.secret_key = 'proyecto_ufps'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 mysql = MySQL()
 
 # import routes

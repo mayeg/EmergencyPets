@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 import hashlib
-
+import os
 from flask.helpers import flash
 from dao.mascota_dao import MascotaDao
 from flask import render_template, redirect, url_for, session
+from datetime import datetime
 
 from dao.usuario_dao import UsuarioDao
 from dto.mascota import Mascota
 from dto.usuario import Usuario
+from werkzeug.utils import secure_filename
 
 
 class MascotaController:
@@ -27,11 +29,15 @@ class MascotaController:
                                mascota=mascota)
 
     def crear_mascota(self, nombre, dueno, fecha_nacimiento, raza, genero,
-                      vacunas, foto, especie, peso_aprox):
+                      vacunas, file, especie, peso_aprox):
+        from integrador import UPLOAD_FOLDER
+        filename = str(datetime.now().microsecond) + secure_filename(
+            file.filename)
+        file.save(os.path.join(UPLOAD_FOLDER, filename))
 
         mascota = Mascota(nombre=nombre, dueno=dueno,
                           fecha_nacimiento=fecha_nacimiento, raza=raza,
-                          genero=genero, vacunas=vacunas, foto=foto,
+                          genero=genero, vacunas=vacunas, foto=filename,
                           especie=especie, peso_aprox=peso_aprox)
 
         if MascotaDao().crear_mascota(mascota):
