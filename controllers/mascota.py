@@ -54,6 +54,13 @@ class MascotaController:
         return render_template("usuarios/listar_mascotas.html", usuario=usuario,
                         mascotas=mascotas)
 
+    def get_ver_mascota(self, id, id_usario):
+        usuario = UsuarioDao().get_usuario_id(id_usario)
+        mascota = Mascota(id=id)
+        mascota_v = MascotaDao().get_mascota(mascota)
+        print mascota_v.getFoto()
+        return render_template("usuarios/ver_mascota.html", usuario=usuario,
+                               mascota=mascota_v, id=id)
 
     def get_editar_mascota(self, id_usuario):
         usuario = Usuario(id=id_usuario)

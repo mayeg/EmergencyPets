@@ -19,6 +19,7 @@
             {% if mascotas %}
             <table class="striped responsive-table ">
                 <tr>
+                    <th class="text-center">Id</th>
                     <th class="text-center">Nombre</th>
                     <th class="text-center">Dueño</th>
                     <th class="text-center">Raza</th>
@@ -30,6 +31,7 @@
                 </tr>
                 {% for mascota in mascotas %}
                 <tr>
+                    <td>{{mascota.getId()}}</td>
                     <td>{{mascota.getNombre()}}</td>
                     <td>{{mascota.getDueno().getId()}}</td>
                     <td>{{mascota.getRaza()}}</td>
@@ -41,7 +43,7 @@
                         <a href="/mascotas/editar"
                            class="btn waves-effect waves-light deep-orange lighten-2">
                             <i class="mdi-editor-border-color"></i></a>
-                        <a href="/}"
+                        <a href="/mascotas/ver/{{mascota.getId()}}"
                            class="btn waves-effect waves-light deep-orange lighten-2">
                             <i class="mdi-action-pageview"></i></a>
                     </td>

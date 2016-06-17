@@ -38,7 +38,8 @@ def listar_mascotas():
 
 @mascota.route("/ver/<id>", methods=["GET"])
 def ver_mascotas(id):
-    return MascotaController().mascotas_usuario()
+    id_usuario = session['usuario']['id']
+    return MascotaController().get_ver_mascota(id,id_usuario)
 
 
 @mascota.route("/editar", methods=["GET", "POST"])

@@ -68,6 +68,25 @@ class MascotaDao:
             print e.message
             return None
 
+    def get_mascota(self, mascota):
+        try:
+            query = "SELECT * FROM mascota  WHERE id =%s"
+            param = (mascota.getId(),)
+            self.__cur.execute(query, param)
+            data = self.__cur.fetchone()
+            if data is None:
+                return None
+            mascota = Mascota(dueno=data[1], nombre=data[2],
+                              fecha_nacimiento=data[3], raza=data[4],
+                              genero=data[5], vacunas=data[6], foto=data[7],
+                              especie=data[8], peso_aprox=data[9])
+            return mascota
+        except Exception as e:
+            print e.__class__
+            print e.message
+            return None
+
+
     def editar_mascota(self, mascota):
         try:
             query = "UPDATE mascota SET nombre=%S, dueno=%s, fecha_nacimiento=%s," \
