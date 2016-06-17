@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fa4c138-d585-4963-aa08-9d7677ea42eb" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/uploads/549194WhatsApp-Image-20160524_1.jpg" afterPath="$PROJECT_DIR$/static/uploads/549194WhatsApp-Image-20160524_1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/uploads/gitkeep" afterPath="$PROJECT_DIR$/static/uploads/gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/mascota.py" afterPath="$PROJECT_DIR$/controllers/mascota.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/mascota_dao.py" afterPath="$PROJECT_DIR$/dao/mascota_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/mascota_routes.py" afterPath="$PROJECT_DIR$/routes/mascota_routes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/usuarios/listar_mascotas.html" afterPath="$PROJECT_DIR$/views/usuarios/listar_mascotas.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/usuarios/ver_mascota.html" afterPath="$PROJECT_DIR$/views/usuarios/ver_mascota.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/plantillas/perfil.html" afterPath="$PROJECT_DIR$/views/plantillas/perfil.html" />
     </list>
     <ignored path="proyecto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,7 +75,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mascota.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mascota.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/mascota.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="142">
@@ -104,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="perfil.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="perfil.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/plantillas/perfil.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="179" column="72" selection-start-line="179" selection-start-column="13" selection-end-line="179" selection-end-column="72" />
+            <state relative-caret-position="117">
+              <caret line="119" column="43" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -190,7 +183,6 @@
         <option value="$PROJECT_DIR$/views/emergencias/mensaje.html" />
         <option value="$PROJECT_DIR$/routes/emergencia_routes.py" />
         <option value="$PROJECT_DIR$/integrador.py" />
-        <option value="$PROJECT_DIR$/views/plantillas/perfil.html" />
         <option value="$PROJECT_DIR$/views/usuarios/perfilU.html" />
         <option value="$PROJECT_DIR$/controllers/login.py" />
         <option value="$PROJECT_DIR$/views/usuarios/home.html" />
@@ -206,6 +198,7 @@
         <option value="$PROJECT_DIR$/views/usuarios/listar_mascotas.html" />
         <option value="$PROJECT_DIR$/views/usuarios/ver_mascota.html" />
         <option value="$PROJECT_DIR$/controllers/mascota.py" />
+        <option value="$PROJECT_DIR$/views/plantillas/perfil.html" />
       </list>
     </option>
   </component>
@@ -611,9 +604,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22383253" sideWeight="0.5055762" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2857143" sideWeight="0.4944238" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2857143" sideWeight="0.4944238" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32263243" sideWeight="0.49739778" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32263243" sideWeight="0.49739778" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19405204" sideWeight="0.50718683" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1004,14 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/plantillas/perfil.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="179" column="72" selection-start-line="179" selection-start-column="13" selection-end-line="179" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/usuarios/ver_mascota.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1027,6 +1012,14 @@
           <folding>
             <element signature="e#24#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/plantillas/perfil.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="119" column="43" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
