@@ -5,12 +5,10 @@ from flask.helpers import flash
 from dao.mascota_dao import MascotaDao
 from flask import render_template, redirect, url_for, session
 from datetime import datetime
-
 from dao.usuario_dao import UsuarioDao
 from dto.mascota import Mascota
 from dto.usuario import Usuario
 from werkzeug.utils import secure_filename
-
 
 class MascotaController:
     def __init__(self):

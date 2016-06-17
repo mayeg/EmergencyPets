@@ -35,3 +35,7 @@ def listar_mascotas():
     return MascotaController().mascotas_usuario()
 
 
+
+@mascota.route("/ver/<id>", methods=["GET"])
+def ver_mascotas(id):
+    return MascotaController().mascotas_usuario()

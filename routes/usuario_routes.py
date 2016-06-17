@@ -6,6 +6,11 @@ from controllers.usuario import UsuarioController
 usuario = Blueprint("usuarios", __name__)
 
 
+@usuario.route("/", methods=["GET"])
+def get_home():
+    return UsuarioController().get_home_user()
+
+
 @usuario.route("/registro", methods=["GET", "POST"])
 def registro_usuario():
     if request.method == "GET":
@@ -39,3 +44,22 @@ def registro_usuario2():
 def perfil_usuario():
     id = session['usuario']['id']
     return UsuarioController().get_perfil(id)
+
+
+@usuario.route("/editar/<id_usuario>", methods=["GET", "POST"])
+def editar_usuario(id_usuario):
+    if request.method == "GET":
+        return UsuarioController().get_editar_usuario(id_usuario)
+    cedula = request.form.get('cedula', None)
+    nombre = request.form.get('nombre', None)
+    apellido = request.form.get('apellido', None)
+    genero = request.form.get('genero', None)
+    email = request.form.get('email', None)
+    barrio = request.form.get('barrio', None)
+    direccion = request.form.get('direccion', None)
+    fecha_nacimiento = request.form.get('fecha_nacimiento', None)
+    telefono = request.form.get('telefono', None)
+
+    return UsuarioController().editar_usuario(nombre, apellido, cedula, email,
+                                              id_usuario, genero, barrio, direccion,
+                                              fecha_nacimiento, telefono)

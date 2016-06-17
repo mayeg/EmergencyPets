@@ -14,6 +14,12 @@ class UsuarioController:
     def __init__(self):
         pass
 
+    def get_home_user(self):
+        id = session['usuario']['id']
+        usuario = UsuarioDao().get_usuario_id(id)
+        return render_template("usuarios/home.html",  usuario=usuario)
+
+
     def get_registro(self):
         usuario = {
             'nombre': "", 'apellido': "", 'cedula': "", 'genero': "",
@@ -87,6 +93,40 @@ class UsuarioController:
         flash(msg, type_flash)
         return redirect(url_for("emergencia.get_mensaje"))
 
+    def get_editar_usuario(self, id_usuario):
+        usuario = Usuario(id=id_usuario)
+        usuario_e = UsuarioDao().get_usuario_id(usuario.getId())
+        usuario_edit = {
+            'nombre': usuario_e.getNombre(),
+            'apellido': usuario_e.getApellido(),
+            'genero': usuario_e.getGenero(),
+            'telefono': usuario_e.getTelefono(),
+            'fecha_nacimiento': usuario_e.getFecha_nacimiento(),
+            'barrio': usuario_e.getBarrio(),
+            'direccion': usuario_e.getDireccion(),
+            'cedula': usuario_e.getCedula(),
+            'email': usuario_e.getEmail()
+        }
+
+        if usuario_e is None:
+            flash("El usuario que intenta editar no existe.", "error")
+        return render_template(
+            "usuario/editar.html", usuario_edit=usuario_edit, id=id_usuario)
+
+
+    def editar_usuario(self, nombre, apellido, cedula, email,id,genero,telefono,
+                       fecha_nacimiento,barrio,direccion):
+
+        usuario_e = Usuario(id=id, cedula=cedula, nombre=nombre, apellido=apellido,
+                            genero=genero, email=email, barrio=barrio,
+                            direccion=direccion, fecha_nacimiento=fecha_nacimiento,
+                            telefono=telefono)
+
+        if UsuarioDao().editar_usuario(usuario_e):
+            flash("El usuario se edito correctamente.", "success")
+        else:
+            flash("Error al editar el usuario.", "error")
+        return redirect(url_for("usuarios.get_home"))
 
 
 
