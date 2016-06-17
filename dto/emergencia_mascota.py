@@ -1,14 +1,15 @@
+from dto.emergencia import Emergencia
 from dto.mascota import Mascota
 from dto.usuario import Usuario
 
 
 class Emergencia_Mascota:
 
-    def __init__(self, id=0, id_usuario=0, id_mascota=0, fecha=""):
+    def __init__(self, id=0, id_usuario=0, id_emergencia=0, fecha=""):
 
         self.__id = id
         self.__id_usuario = Usuario(id=id_usuario)
-        self.__id_mascota = Mascota(id=id_mascota)
+        self.__id_emergencia = Emergencia(id=id_emergencia)
         self.__fecha = fecha
 
     def getId(self):
@@ -23,11 +24,11 @@ class Emergencia_Mascota:
     def setId_usuario(self, id_usuario):
         self.__id_usuario = id_usuario
 
-    def getId_mascota(self):
-        return self.__id_mascota
+    def getId_emergencia(self):
+        return self.__id_emergencia
 
-    def setId_mascota(self, id_mascota):
-        self.__id_mascota = id_mascota
+    def setId_emergencia(self, id_emergencia):
+        self.__id_emergencia = id_emergencia
 
     def getFecha(self):
         return self.__fecha

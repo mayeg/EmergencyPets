@@ -65,9 +65,13 @@ class UsuarioController:
         return redirect(url_for("login.get_home"))
 
     def get_emergencias(self):
+
         return render_template("plantillas/emergencia.html")
 
     def get_emergencia_atraganta(self):
+        id = session['usuario']['id']
+        usuario= Usuario(id=id)
+
         return render_template("emergencias/atragantamiento.html")
 
     def get_emergencia_traumatismo(self):
