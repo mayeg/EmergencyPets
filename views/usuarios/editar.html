@@ -1,0 +1,117 @@
+{% extends "plantillas/perfil.html" %}
+{% block name %}{{usuario.getNombre()}}{% endblock %}
+{% block contenido %}
+<div class="row card-panel z-depth-3">
+    <form class="form-horizontal " action="/usuarios/editar/{{id}}"
+          method="POST">
+        <div class="row">
+            <div class="input-field">
+                <h4 class="center">Editar Informacion</h4>
+                <p class="center">Aqui podras editar tu informacion</p>
+            </div>
+        </div>
+        <div class="row margin">
+            <div class="input-field col s6 l6 m6">
+                <i class="mdi-action-account-box prefix"></i>
+                <input id="nombre" type="text" name="nombre"
+                       value={{usuario_edit['nombre']}}>
+                <label for="nombre" class="center-align">Nombre</label>
+            </div>
+            <div class="input-field col s6 l6 m6">
+                <i class="mdi-action-account-box prefix"></i>
+                <input id="apellido" type="text" name="apellido"
+                value={{usuario_edit['apellido']}}>
+                <label for="apellido"
+                       class="center-align">Apellido</label>
+            </div>
+        </div>
+        <div class="row margin">
+            <div class="input-field col s6 l6 m6">
+                <i class="mdi-action-credit-card prefix"></i>
+                <input id="cedula" type="text" name="cedula"
+                value={{usuario_edit['cedula']}}>
+                <label for="cedula" class="center-align">Cedula</label>
+            </div>
+            <select name="genero" id="genero" class="col s6 l6 m6">
+                <option value="" disabled selected>Genero</option>
+                <option value="M">M</option>
+                <option value="F">F</option>
+            </select>
+        </div>
+        <div class="row margin">
+            <div class="input-field col s12">
+                <i class="mdi-communication-email prefix"></i>
+                <input id="email" type="text" name="email"
+                value={{usuario_edit['email']}}>
+                <label for="email" class="center-align">Email</label>
+            </div>
+        </div>
+        <div class="row margin">
+            <div class="input-field col s6 l6 m6">
+                <i class="mdi-communication-location-on prefix"></i>
+                <input id="direccion" type="text" name="direccion"
+                value={{usuario_edit['direccion']}}>
+                <label for="direccion">Direccion</label>
+            </div>
+            <div class="input-field col s6 l6 m6">
+                <i class="mdi-communication-location-on prefix"></i>
+                <input id="barrio" type="text" name="barrio"
+                value={{usuario_edit['barrio']}}>
+                <label for="barrio" class="center-align">Barrio</label>
+            </div>
+        </div>
+
+        <div class="row margin">
+            <div class="input-field col s6 l6 m6">
+                <i class="mdi-action-today prefix"></i>
+                <input class="datepicker" id="fecha_nacimiento"
+                       type="date"
+                       name="fecha_nacimiento"
+                value={{usuario_edit['fecha_nacimiento']}}>
+                <label for="fecha_nacimiento" class="center-align">Fecha
+                    de
+                    nacimiento</label>
+            </div>
+            <div class="input-field col s6 l6 m6">
+                <i class="mdi-communication-phone prefix"></i>
+                <input id="telefono" type="text" name="telefono"
+                value={{usuario_edit['telefono']}}>
+                <label for="telefono"
+                       class="center-align">Telefono</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12 center">
+                <button class="btn waves-effect waves-light deep-orange lighten-2 "
+                        type="submit">
+                    Editar Informacion
+                    <i class="mdi-content-send right"></i>
+                </button>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+{% block scripts %}
+<script>
+      $('.datepicker').pickadate({
+      selectMonths: true,
+      selectYears: 50,
+      format: 'yyyy-mm-dd',
+      });
+
+
+</script>
+<script>
+
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+
+
+
+</script>
+{% endblock %}

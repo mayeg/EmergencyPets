@@ -19,7 +19,9 @@ class Login:
     @staticmethod
     def get_home_usuario():
         if 'usuario' in session:
-            return render_template('plantillas/perfil.html', nombre=session['usuario']['nombre'])
+            id = session['usuario']['id']
+            usuario = UsuarioDao().get_usuario_id(id)
+            return render_template('usuarios/home.html', usuario=usuario, id=id)
         return render_template('home/index.html')
 
     @staticmethod

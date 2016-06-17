@@ -113,13 +113,12 @@ class UsuarioDao:
         try:
             query = "UPDATE usuario SET cedula= %s, nombre= %s, apellido= %s," \
                     "genero= %s, email= %s, barrio= %s, direccion= %s, " \
-                    "fecha_nacimiento= %s, telefono= %s, token_password= %s" \
+                    "fecha_nacimiento= %s, telefono= %s" \
                     " WHERE id=%s "
             param = (usuario.getCedula(), usuario.getNombre(), usuario.getApellido(),
                      usuario.getGenero(), usuario.getEmail(), usuario.getBarrio(),
                      usuario.getDireccion(), usuario.getFecha_nacimiento(),
-                     usuario.getTelefono(), usuario.getTokenPassword(),
-                     int(usuario.getId()))
+                     usuario.getTelefono(), int(usuario.getId()))
             self.__cur.execute(query, param)
             self.__conn.commit()
             return True

@@ -111,11 +111,12 @@ class UsuarioController:
         if usuario_e is None:
             flash("El usuario que intenta editar no existe.", "error")
         return render_template(
-            "usuario/editar.html", usuario_edit=usuario_edit, id=id_usuario)
+            "usuarios/editar.html", usuario_edit=usuario_edit, id=id_usuario,
+            usuario=usuario_e)
 
 
-    def editar_usuario(self, nombre, apellido, cedula, email,id,genero,telefono,
-                       fecha_nacimiento,barrio,direccion):
+    def editar_usuario(self, id, cedula, nombre, apellido, genero, email,
+                       barrio, direccion, fecha_nacimiento, telefono):
 
         usuario_e = Usuario(id=id, cedula=cedula, nombre=nombre, apellido=apellido,
                             genero=genero, email=email, barrio=barrio,
@@ -126,7 +127,7 @@ class UsuarioController:
             flash("El usuario se edito correctamente.", "success")
         else:
             flash("Error al editar el usuario.", "error")
-        return redirect(url_for("usuarios.get_home"))
+        return redirect(url_for("login.get_home"))
 
 
 

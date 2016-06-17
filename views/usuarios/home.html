@@ -6,35 +6,45 @@
         <img class="activator" src="/static/imagenes/banner.png" alt="user background">
     </div>
     <div class="card-content">
-        <img src="images/avatar.jpg" alt=""
-             class="circle responsive-img activator card-profile-image">
+        <i class="mdi-action-account-circle large"></i>
         <a class="btn-floating activator btn-move-up waves-effect waves-light darken-2 right">
             <i class="mdi-action-account-circle"></i>
         </a>
 
-        <span class="card-title activator grey-text text-darken-4">Roger Waters</span>
+        <span class="card-title activator grey-text text-darken-4">
+            {{usuario.getNombre()}}</span>
         <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i>
-            Project Manager</p>
-        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> +1
-            (612) 222 8989</p>
+            {{usuario.getNombre()}}</p>
+        <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i>
+            {{usuario.getApellido()}}</p>
+        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i>
+            {{usuario.getTelefono()}}</p>
         <p><i class="mdi-communication-email cyan-text text-darken-2"></i>
-            mail@domain.com</p>
+            {{usuario.getEmail()}}</p>
 
     </div>
     <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">Roger Waters <i
+        <span class="card-title grey-text text-darken-4">{{usuario.getNombre()}}<i
                 class="mdi-navigation-close right"></i></span>
-        <p>Here is some more information about this card.</p>
+        <p>Aqui encontrara mas informacion.</p>
         <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i>
-            Project Manager</p>
-        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> +1
-            (612) 222 8989</p>
+            {{usuario.getNombre()}}</p>
+        <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i>
+            {{usuario.getApellido()}}</p>
+        <p><i class="mdi-action-assignment-ind cyan-text text-darken-2"></i>
+            {{usuario.getCedula()}}</p>
+        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i>
+            {{usuario.getTelefono()}}</p>
         <p><i class="mdi-communication-email cyan-text text-darken-2"></i>
-            mail@domain.com</p>
-        <p><i class="mdi-social-cake cyan-text text-darken-2"></i> 18th June
-            1990</p>
-        <p><i class="mdi-device-airplanemode-on cyan-text text-darken-2"></i>
-            BAR - AUS</p>
+            {{usuario.getEmail()}}</p>
+        <p><i class="mdi-social-cake cyan-text text-darken-2"></i>
+            {{usuario.getFecha_nacimiento()}}</p>
+        <p><i class="mdi-action-room cyan-text text-darken-2"></i>
+            {{usuario.getDireccion()}}</p>
+        <a href="/usuarios/editar/{{id}}"
+               class="btn waves-effect waves-light deep-orange lighten-2">
+                <i class="mdi-social-group-add"></i> Editar Informacion
+            </a>
     </div>
 </div>
 {% endblock %}
